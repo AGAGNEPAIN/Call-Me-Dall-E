@@ -16,6 +16,7 @@ export default function Home() {
   const [submitClass, setSubmitClass] = useState("");
 
   const getImages = useCallback(async () => {
+    setError(false);
     setSubmitClass(style.checked);
     setTimeout(() => {
       setSubmitClass("");
@@ -114,7 +115,9 @@ export default function Home() {
           </div>
         </div>
       </form>
-      {error && <h6>Une erreur est survenue</h6>}
+
+      {error && <h6 className="error">Une erreur est survenue</h6>}
+
       <div className={style.images__container}>
         {imagesData.length > 0 &&
           imagesData.map((image, index) => {

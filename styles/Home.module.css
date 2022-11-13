@@ -68,12 +68,13 @@ form.image-details {
   transition: border-color 0.2s;
 }
 .form__field::placeholder {
-  color: transparent;
+  color: #9b9b9b;
 }
 .form__field:placeholder-shown ~ .form__label {
   font-size: 1.3rem;
   cursor: text;
   top: 20px;
+  color: transparent;
 }
 
 .form__label {
@@ -92,6 +93,10 @@ form.image-details {
   border-image: linear-gradient(to right, #fde4cf, #274c77);
   border-image-slice: 1;
 }
+.form__field:focus::placeholder {
+  color: transparent;
+}
+
 .form__field:focus ~ .form__label {
   position: absolute;
   top: 0;
@@ -118,7 +123,7 @@ form.image-details {
   height: 100px;
   overflow: visible;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .submit,
@@ -202,7 +207,7 @@ form.image-details {
 }
 
 .checked .submit:after {
-  animation: submit-after-anim 0.5s 4.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: submit-after-anim 0.5s 6.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .yellow {
@@ -219,15 +224,15 @@ form.image-details {
 }
 
 .checked .pink {
-  animation: loader-anim-pink 4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: loader-anim-pink 6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .checked .yellow {
-  animation: loader-anim-yellow 4s 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: loader-anim-yellow 6s 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .checked .orange {
-  animation: loader-anim-orange 4s 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: loader-anim-orange 6s 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .loader {
@@ -243,7 +248,7 @@ form.image-details {
 }
 
 .checked .loader__wrapper {
-  animation: wrapper-loader-anim 4.2s linear;
+  animation: wrapper-loader-anim 6.2s linear;
   width: 95px;
   height: 95px;
   transform: scale(0);
@@ -253,7 +258,7 @@ form.image-details {
   width: 95px;
   color: rgba(255, 255, 255, 0);
   background: linear-gradient(to right, #ff7b6e 0%, #ff7b6e 100%);
-  animation: submit-anim 4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: submit-anim 6s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .check__wrapper {
@@ -289,7 +294,7 @@ form.image-details {
 }
 
 .checked .check {
-  animation: check 4s 4.4s ease forwards;
+  animation: check 6s 6.4s ease forwards;
 }
 
 @keyframes loader-anim-pink {

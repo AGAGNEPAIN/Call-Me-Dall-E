@@ -73,7 +73,7 @@ export default function Home() {
           <input
             type="input"
             className={style.form__field}
-            placeholder="Image description"
+            placeholder="High quality photo of a monkey astronaut"
             name="description"
             id="description"
             required

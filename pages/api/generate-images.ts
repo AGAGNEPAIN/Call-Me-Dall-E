@@ -21,10 +21,10 @@ export default async function generateImageHandler(
       n: number,
       size: "512x512",
     });
-    console.log(response);
-
     res.status(200).json(response.data.data);
   } catch (err) {
+    console.log(err);
+
     res.status(500);
   }
 }

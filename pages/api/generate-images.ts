@@ -14,6 +14,7 @@ export default async function generateImageHandler(
   res: NextApiResponse<ImagesResponseDataInner[]>
 ) {
   const { prompt, number } = req.body;
+  console.log(process.env.NEXT_PUBLIC_OPENAI_KEY);
 
   try {
     const response = await openai.createImage({

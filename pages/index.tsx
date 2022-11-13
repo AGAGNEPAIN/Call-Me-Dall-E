@@ -33,6 +33,7 @@ export default function Home() {
     if (response.ok) {
       response.json().then((data) => setImagesData(data));
     } else {
+      setImagesData([]);
       setError(true);
     }
   }, [setImagesData, formData, style]);

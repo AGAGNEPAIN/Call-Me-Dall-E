@@ -14,14 +14,14 @@ export default async function generateImageHandler(
   res: NextApiResponse<ImagesResponseDataInner[]>
 ) {
   const { prompt, number } = req.body;
-  console.log(process.env.NEXT_PUBLIC_OPENAI_KEY);
-
+  
   try {
     const response = await openai.createImage({
       prompt,
       n: number,
       size: "512x512",
     });
+    
     res.status(200).json(response.data.data);
   } catch (err) {
     console.log(err);
